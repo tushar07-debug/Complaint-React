@@ -1,0 +1,93 @@
+/* Main container styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url('https://darkemeraldtales.files.wordpress.com/2014/02/cork-city-gaol-2.jpg?w=816&h=9999');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .overlay-background {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .content {
+    max-width: 400px; 
+    padding: 20px;
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .form-control {
+    margin-bottom: 15px; 
+  }
+  
+  .form-control:focus {
+    border-color: #a29e8f; 
+  }
+  
+  .btn {
+    margin-top: 15px; 
+    width: 100%; 
+  }
+  
+  .btn-warning {
+    background-color: #3ee04b; 
+    border-color: #000000;
+    color: #212529;
+  }
+  
+  .btn-warning:hover {
+    background-color: #187f08; 
+    border-color: #0b2b18;
+    color: #212529;
+  }
+  
+  .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+  }
+  
+  .btn-info:hover {
+    background-color: #138496; /* Optional: Hover state color */
+    border-color: #138496;
+    color: #fff;
+  }
+  
+ 
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fffdf5;
+  }
+  
+  .alert {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .alert-warning {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #212529;
+  }
+  @media (max-width: 768px) {
+    .content {
+      max-width: 90%; 
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .content {
+      padding: 15px; 
+    }
+  }
+  
