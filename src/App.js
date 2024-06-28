@@ -1,34 +1,41 @@
-// import './App.css';
-// import ComplaintLogger from './components/ComplaintLogger';
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Signup from "./signup/Signup";
+import Login from "./login/Login";
+import ComplaintLogger from "./components/ComplaintLogger";
+import AdminDashboard from "./components/AdminDashboard";
+import "./App.css";
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <ComplaintLogger/>
-//     </div>
-//   );
-// }
+const router = createBrowserRouter([
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/complaint-logger",
+    element: <ComplaintLogger />,
+  },
+  {
+    path: "/admin-dashboard",
+    element: <AdminDashboard />,
+  },
+  {
+    path: "/",
+    index: true, 
+    element: <Login />,
+  },
+]);
 
-// export default App;
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ComplaintLogger from './components/ComplaintLogger';
-import AdminDashboard from './components/AdminDashboard';
-
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<ComplaintLogger />} />
-        <Route path="/AdminDashboard" element={<AdminDashboard />} />
-      </Routes>
-    </Router>
+    <RouterProvider router={router}>
+      {/* You can add a layout component or other elements here */}
+    </RouterProvider>
   );
-};
+}
 
-export default App; // Add this line to export the App component
-
-// Remove this line, as it's not needed
-// ReactDOM.render(<App />, document.getElementById('root'));
+export default App;

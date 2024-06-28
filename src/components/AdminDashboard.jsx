@@ -8,7 +8,7 @@ const fetchComplaints = async () => {
       throw new Error('Failed to fetch complaints');
     }
     const data = await response.json();
-    console.log('Data from API:', data); // Check the data from API
+    console.log('Data from API:', data); 
     return data;
   } catch (error) {
     console.error('Error fetching complaints:', error);
@@ -22,15 +22,15 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     fetchComplaints().then(data => {
-      console.log('Data before setting state:', data); // Check the data before setting state
+      console.log('Data before setting state:', data); 
       setComplaints(data);
     });
   }, []);
 
-  console.log('Complaints state:', complaints); // Check the complaints state
+  console.log('Complaints state:', complaints); 
 
   const handleBackToComplaintLogger = () => {
-    navigate('/');
+    navigate('/complaint-logger');
   };
 
   return (
